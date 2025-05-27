@@ -4,15 +4,91 @@
 <head>
     <title>URL Blocker</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", sans-serif;
+            width: 300px;
+            background-color: #f9fafb;
+        }
 
+        .popup-container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .logo {
+            width: 32px;
+            height: 32px;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #111827;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .buttons button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 10px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #blockListBtn {
+            background-color: #e5e7eb;
+            color: #1f2937;
+        }
+
+        #blockListBtn:hover {
+            background-color: #d1d5db;
+        }
+
+        .focus-btn {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .focus-btn:hover {
+            background-color: #1d4ed8;
+        }
     </style>
 </head>
 
 
 <body>
-    <h2>URL Blocker</h2>
+    <div class="popup-container">
+        <div class="header">
+            <img src="icon.png" alt="Extension Logo" class="logo" />
+            <h1 class="title">Block URL</h1>
+        </div>
+        <p class="description">
+            Block distracting websites and stay focused. Start a focus session or manage your block list.
+        </p>
+        <div class="buttons">
+            <button id="blockListBtn">Customised Block List</button>
+            <button id="startFocusBtn" class="focus-btn">Start Focus Session</button>
+        </div>
+    </div>
 
-    <button id="view-stats">Visit Home</button>
     <script src="popup.js"></script>
 </body>
 

@@ -1,4 +1,9 @@
-const blockedURL = ["x.com", "instagram.com", "facebook.com"];
+const blockedURL = [
+  "x.com",
+  "instagram.com",
+  "facebook.com",
+  "web.whatsapp.com",
+];
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   // I will only act when the tab is loading and has a valid URL

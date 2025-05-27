@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const viewStatsBtn = document.getElementById("view-stats");
+  const blockListBtn = document.getElementById("blockListBtn");
+  const startFocusBtn = document.getElementById("startFocusBtn");
 
-  viewStatsBtn.addEventListener("click", () => {
+  blockListBtn.addEventListener("click", () => {
     chrome.tabs.create({ url: "http://localhost:5173" });
+  });
+  startFocusBtn.addEventListener("click", () => {
+    chrome.runtime.sendMessage({ action: "startFocusSession" });
   });
 });

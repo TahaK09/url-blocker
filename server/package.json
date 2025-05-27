@@ -4,9 +4,10 @@
   "description": "\"This app is build by Taha\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.mjs",
+    "start:dev": "nodemon index.mjs"
   },
-  "author": "Taha Firoz Khan",
+  "author": "Taha F Khan",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
@@ -14,5 +15,6 @@
     "mongodb": "^6.16.0",
     "mongoose": "^8.14.1",
     "server": "file:"
-  }
+  },
+  "type": "module"
 }
