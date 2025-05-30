@@ -30,7 +30,7 @@ function Popup({ visibleAdd }) {
   return (
     <>
       {visibleAdd && (
-        <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-[#000000b9] flex justify-center items-center z-200">
           <div className="w-80 bg-white border border-gray-200 shadow-md rounded-lg p-6">
             <form onSubmit={addBlockUrl} className="flex flex-col gap-4">
               <label htmlFor="url" className="text-gray-700 font-medium">

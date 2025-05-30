@@ -11,6 +11,9 @@
     "scripting",
     "webNavigation"
   ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
   "background": {
     "service_worker": "background.js"
   },
@@ -29,5 +32,11 @@
     "32": "icons/icons.webp",
     "48": "icons/icons.webp",
     "128": "icons/icons.webp"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }

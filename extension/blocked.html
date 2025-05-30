@@ -14,30 +14,26 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1d3557, #457b9d);
+            background: linear-gradient(135deg, #333333, #212121);
             color: white;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             height: 100vh;
             text-align: center;
             padding: 20px;
+            flex-flow: column;
+
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #f1faee;
+            min-width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            gap: 10px;
+            margin-top: 50px;
         }
 
         p {
@@ -50,16 +46,93 @@
             margin-top: 40px;
             color: #a8dadc;
         }
+
+        #button-open {
+            font-size: 20px;
+            font-weight: 500;
+            padding: 8px 20px;
+            border: 2px solid #565656;
+            border-radius: 50px;
+            background: transparent;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .navigation {
+            padding: 15px 15px;
+            display: flex;
+            width: 100%;
+            justify-content: start;
+            align-items: center;
+        }
+
+        #blocked-text {
+            font-size: 44px;
+            font-weight: 650;
+        }
+
+        #focusing-text {
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: #c4c3c3;
+            font-weight: 500;
+        }
+
+        #close-text {
+            font-size: 22px;
+            font-weight: 620;
+            background: #fff;
+            color: #212121;
+            width: 200px;
+            padding: 8px 8px;
+            margin-top: 100px;
+            border-radius: 50px;
+        }
+
+        #close-text:hover {
+            background: #e0e0e0;
+            cursor: pointer;
+        }
+
+        #use-text {
+            font-size: 18px;
+            font-weight: 500;
+            background: transparent;
+            color: #e9e9e9;
+            width: 200px;
+            padding: 8px 8px;
+            border-radius: 50px;
+            cursor: pointer;
+
+        }
+
+        #use-text:hover {
+            color: #dddddd;
+        }
+
+        #quote {
+            font-size: 20px;
+            font-weight: 400;
+            color: #cacaca;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>URL Blocked</h1>
-        <p>This website has been blocked by <strong>Taha's Extension</strong> to help you stay focused and productive.
-        </p>
-        <div class="logo">– Taha's URL Blocker</div>
+    <div class="navigation">
+        <button id="button-open">Open MeaVana</button>
     </div>
+    <div class="container">
+        <div id="focusing-text">MeaVana &bull; Overtime</div>
+        <div id="blocked-text">This site has been blocked.</div>
+
+        <div id="close-text">Close tab</div>
+        <div id="use-text">Open Instagram</div>
+    </div>
+    <div class="quote">
+        <p id="quote">The successful warrior is the average man, with laser-like focus.</p>
+    </div>
+    <script src="blocked.js"></script>
 </body>
 
 </html>
